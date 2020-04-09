@@ -23,6 +23,7 @@ bin/test_functional_array.o : src/test_functional_array.cc \
 	$(COMPILE) -o $@ $<
 
 bin/functional_array.o : src/functional_array.cc inc/functional_array.h
+	cpplint --root=./ */functional_array.*
 	$(COMPILE) -o $@ $<
 
 
@@ -41,6 +42,7 @@ bin/test_tight_vector.o : src/test_tight_vector.cc \
 	$(COMPILE) -o $@ $<
 
 bin/tight_vector.o : src/tight_vector.cc inc/tight_vector.h
+	cpplint --root=./ */tight_vector.*
 	$(COMPILE) -o $@ $<
 
 
@@ -60,6 +62,7 @@ bin/test_char_matrix.o : src/test_char_matrix.cc \
 	$(COMPILE) -o $@ $<
 
 bin/char_matrix.o : src/char_matrix.cc inc/char_matrix.h
+	cpplint --root=./ */char_matrix.*
 	$(COMPILE) -o $@ $<
 
 
@@ -74,6 +77,7 @@ bin/test_time_span.o : src/test_time_span.cc \
 	$(COMPILE) -o $@ $<
 
 bin/time_span.o : src/time_span.cc inc/time_span.h
+	cpplint --root=./ */time_span.*
 	$(COMPILE) -o $@ $<
 
 

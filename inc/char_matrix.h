@@ -1,3 +1,4 @@
+/* copyright Bricen Bennett 2020 CSCE240 */
 // CharMatrix Points:
 //   Compiles: 1 (make test_char_matrix)
 //   Lints: 1  (cpplint --root=./ */char_matrix.*)
@@ -5,7 +6,8 @@
 //   TestCopyConstructor: 1
 //   TestAssignOperator: 1
 //   test_char_matrix_memory: 1 (make test_char_matrix_memory)
-
+#ifndef CSCE240_EXAM_2_INC_CHAR_MATRIX_H_
+#define CSCE240_EXAM_2_INC_CHAR_MATRIX_H_
 
 #include <cstddef>
 // using size_t
@@ -44,3 +46,4 @@ class CharMatrix {
   size_t rows_;
   size_t cols_;
 };
+#endif  // CSCE240_EXAM_2_INC_CHAR_MATRIX_H_

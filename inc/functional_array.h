@@ -1,3 +1,5 @@
+/* Copyright Bricen Bennett 2020 CSCE240 */
+
 // functional_array (points):
 //   Compiles: 1 (make test_functional_array)
 //   Lints: 1 (cpplint --root=./ */functional_array.*)
@@ -6,7 +8,8 @@
 //   TestAllocateJagged: 1
 //   TestDeallocateJagged: 1
 //   test_functional_array_memory: 1 (make test_functional_array_memory)
-
+#ifndef CSCE240_EXAM_2_INC_FUNCTIONAL_ARRAY_H_
+#define CSCE240_EXAM_2_INC_FUNCTIONAL_ARRAY_H_
 
 #include <cstddef>
 // using size_t
@@ -40,3 +43,4 @@ size_t** Allocate(const size_t* sizes, size_t length);
 size_t Deallocate(const size_t** arrays,
                   const size_t* sizes,
                   size_t length);
+#endif  // CSCE240_EXAM_2_INC_FUNCTIONAL_ARRAY_H_

@@ -1,3 +1,5 @@
+/* Copyright Bricen Bennett 2020 csce240 */
+
 // TimeSpan Points:
 //   Compiles: 1 (make test_time_span)
 //   Lints: 1  (cpplint --root=./ */time_span.*)
@@ -5,7 +7,8 @@
 //   TestPlusInt: 1
 //   TestPlusExtract: 1
 //   TestPlusInsert: 1
-
+#ifndef CSCE240_EXAM_2_INC_TIME_SPAN_H_
+#define CSCE240_EXAM_2_INC_TIME_SPAN_H_
 
 #include <istream>
 #include <ostream>
@@ -33,6 +36,13 @@ class TimeSpan {
 
   // returns the sum of two TimeSpan instances
   const TimeSpan operator+(const TimeSpan& rhs) const;
+  int hours_;
+  int minutes_;
+  int seconds_;
+
+  std::ostream& Extract(std::ostream* out) const;
+
+  std::istream& Insert(std::istream* in);
 };
 
 // returns the sum of a number of seconds as an int and a TimeSpan
@@ -43,3 +53,4 @@ std::istream& operator>>(std::istream& lhs, TimeSpan& rhs);
 
 // inserts the TimeSpan from HH : MM : SS each being formatted as an int
 std::ostream& operator<<(std::ostream& lhs, const TimeSpan& rhs);
+#endif  // CSCE240_EXAM_2_INC_TIME_SPAN_H_
